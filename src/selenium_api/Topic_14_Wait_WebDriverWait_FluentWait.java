@@ -41,6 +41,11 @@ public class Topic_14_Wait_WebDriverWait_FluentWait{
     Assert.assertEquals(driver.getTitle(), "");
 
   }
+  
+  @Test
+  public void FluentWait_Example() {
+	  
+  }
   @AfterTest
   public void afterTest() {
     driver.quit();

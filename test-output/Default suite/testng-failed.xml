@@ -3,13 +3,13 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="exercise.Extra_ShadowDOMElement">
+      <class name="selenium_api.Topic_6_CustomDropdown">
         <methods>
-          <include name="f"/>
-          <include name="beforeTest"/>
-          <include name="afterTest"/>
+          <include name="beforeClass"/>
+          <include name="afterClass"/>
+          <include name="TC_01_HTMLDropdown_New"/>
         </methods>
-      </class> <!-- exercise.Extra_ShadowDOMElement -->
+      </class> <!-- selenium_api.Topic_6_CustomDropdown -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

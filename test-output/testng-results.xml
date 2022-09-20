@@ -1,90 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="1" total="1" passed="0">
+<testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="34235" started-at="2022-09-09T03:01:11Z" finished-at="2022-09-09T03:01:45Z">
+  <suite name="Default suite" duration-ms="5707" started-at="2022-09-20T02:18:55Z" finished-at="2022-09-20T02:19:01Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="34235" started-at="2022-09-09T03:01:11Z" finished-at="2022-09-09T03:01:45Z">
-      <class name="exercise.Extra_ShadowDOMElement">
-        <test-method status="PASS" signature="beforeTest()[pri:0, instance:exercise.Extra_ShadowDOMElement@174d20a]" name="beforeTest" is-config="true" duration-ms="4110" started-at="2022-09-09T10:01:11Z" finished-at="2022-09-09T10:01:15Z">
+    <test name="Default test" duration-ms="5707" started-at="2022-09-20T02:18:55Z" finished-at="2022-09-20T02:19:01Z">
+      <class name="selenium_api.Topic_6_CustomDropdown">
+        <test-method status="PASS" signature="beforeClass()[pri:0, instance:selenium_api.Topic_6_CustomDropdown@eff760]" name="beforeClass" is-config="true" duration-ms="2287" started-at="2022-09-20T09:18:55Z" finished-at="2022-09-20T09:18:57Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- beforeTest -->
-        <test-method status="FAIL" signature="f()[pri:0, instance:exercise.Extra_ShadowDOMElement@174d20a]" name="f" duration-ms="30099" started-at="2022-09-09T10:01:15Z" finished-at="2022-09-09T10:01:45Z">
-          <exception class="org.openqa.selenium.NoSuchElementException">
-            <message>
-              <![CDATA[no such element: Unable to locate element: {"method":"css selector","selector":".shopee-popup__close-btn"}
-  (Session info: chrome=105.0.5195.102)
-  (Driver info: chromedriver=104.0.5112.79 (3cf3e8c8a07d104b9e1260c910efb8f383285dc5-refs/branch-heads/5112@{#1307}),platform=Windows NT 10.0.22000 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 30.08 seconds
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '2.53.1', revision: 'a36b8b1', time: '2016-06-30 17:37:03'
-System info: host: 'AXQC-L26', ip: '192.168.1.14', os.name: 'Windows 10', os.arch: 'x86', os.version: '10.0', java.version: '1.8.0_261'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{mobileEmulationEnabled=false, timeouts={implicit=0, pageLoad=300000, script=30000}, hasTouchScreen=false, platform=XP, acceptSslCerts=false, goog:chromeOptions={debuggerAddress=localhost:64443}, webauthn:extension:credBlob=true, acceptInsecureCerts=false, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, setWindowRect=true, webauthn:extension:largeBlob=true, unexpectedAlertBehaviour=ignore, rotatable=false, networkConnectionEnabled=false, chrome={chromedriverVersion=104.0.5112.79 (3cf3e8c8a07d104b9e1260c910efb8f383285dc5-refs/branch-heads/5112@{#1307}), userDataDir=C:\Users\KIMPHU~1.TRA\AppData\Local\Temp\scoped_dir11836_1463996844}, takesHeapSnapshot=true, pageLoadStrategy=normal, strictFileInteractability=false, databaseEnabled=false, handlesAlerts=true, version=105.0.5195.102, browserConnectionEnabled=false, proxy={}, nativeEvents=true, locationContextEnabled=true, cssSelectorsEnabled=true, webauthn:virtualAuthenticators=true}]
-Session ID: a9cb5975afc967544ac338255d018d32
-*** Element info: {Using=css selector, value=.shopee-popup__close-btn}]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":".shopee-popup__close-btn"}
-  (Session info: chrome=105.0.5195.102)
-  (Driver info: chromedriver=104.0.5112.79 (3cf3e8c8a07d104b9e1260c910efb8f383285dc5-refs/branch-heads/5112@{#1307}),platform=Windows NT 10.0.22000 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 30.08 seconds
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '2.53.1', revision: 'a36b8b1', time: '2016-06-30 17:37:03'
-System info: host: 'AXQC-L26', ip: '192.168.1.14', os.name: 'Windows 10', os.arch: 'x86', os.version: '10.0', java.version: '1.8.0_261'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{mobileEmulationEnabled=false, timeouts={implicit=0, pageLoad=300000, script=30000}, hasTouchScreen=false, platform=XP, acceptSslCerts=false, goog:chromeOptions={debuggerAddress=localhost:64443}, webauthn:extension:credBlob=true, acceptInsecureCerts=false, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, setWindowRect=true, webauthn:extension:largeBlob=true, unexpectedAlertBehaviour=ignore, rotatable=false, networkConnectionEnabled=false, chrome={chromedriverVersion=104.0.5112.79 (3cf3e8c8a07d104b9e1260c910efb8f383285dc5-refs/branch-heads/5112@{#1307}), userDataDir=C:\Users\KIMPHU~1.TRA\AppData\Local\Temp\scoped_dir11836_1463996844}, takesHeapSnapshot=true, pageLoadStrategy=normal, strictFileInteractability=false, databaseEnabled=false, handlesAlerts=true, version=105.0.5195.102, browserConnectionEnabled=false, proxy={}, nativeEvents=true, locationContextEnabled=true, cssSelectorsEnabled=true, webauthn:virtualAuthenticators=true}]
-Session ID: a9cb5975afc967544ac338255d018d32
-*** Element info: {Using=css selector, value=.shopee-popup__close-btn}
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
-	at java.lang.reflect.Constructor.newInstance(Unknown Source)
-	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
-	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:678)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementByCssSelector(RemoteWebDriver.java:492)
-	at org.openqa.selenium.By$ByCssSelector.findElement(By.java:430)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
-	at exercise.Extra_ShadowDOMElement.f(Extra_ShadowDOMElement.java:28)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:639)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:816)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1124)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
-	at org.testng.TestRunner.privateRun(TestRunner.java:774)
-	at org.testng.TestRunner.run(TestRunner.java:624)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:359)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:354)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:312)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:261)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1215)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1140)
-	at org.testng.TestNG.run(TestNG.java:1048)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:126)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:137)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:58)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+        </test-method> <!-- beforeClass -->
+        <test-method status="PASS" signature="TC_02_CustomDropdown()[pri:0, instance:selenium_api.Topic_6_CustomDropdown@eff760]" name="TC_02_CustomDropdown" duration-ms="3408" started-at="2022-09-20T09:18:57Z" finished-at="2022-09-20T09:19:01Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- f -->
-        <test-method status="PASS" signature="afterTest()[pri:0, instance:exercise.Extra_ShadowDOMElement@174d20a]" name="afterTest" is-config="true" duration-ms="0" started-at="2022-09-09T10:01:45Z" finished-at="2022-09-09T10:01:45Z">
+        </test-method> <!-- TC_02_CustomDropdown -->
+        <test-method status="PASS" signature="afterClass()[pri:0, instance:selenium_api.Topic_6_CustomDropdown@eff760]" name="afterClass" is-config="true" duration-ms="1" started-at="2022-09-20T09:19:01Z" finished-at="2022-09-20T09:19:01Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- afterTest -->
-      </class> <!-- exercise.Extra_ShadowDOMElement -->
+        </test-method> <!-- afterClass -->
+      </class> <!-- selenium_api.Topic_6_CustomDropdown -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

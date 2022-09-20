@@ -15,7 +15,7 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
-
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -32,14 +32,51 @@ public class Topic_6_CustomDropdown {
     WebDriver driver;
 	WebDriverWait wait;
 
-    //( ._.')----------------------------------------------------
+
 	@BeforeClass
 	public void beforeClass() {
 		driver = new ChromeDriver();
 		wait = new WebDriverWait(driver, 30);
 	}
 
-	//( ._.')----------------------------------------------------
+
+	@Test
+	public void TC_02_CustomDropdown() {
+		  driver.get("https://jqueryui.com/selectmenu/");
+		  String itemExpected = "19";
+		 
+
+		  //1. Click vào locator của dropdown
+//		  driver.findElement(By.xpath("//span[@id='number-button']")).click(); //nếu dòng này bị lỗi k tìm thấy thì có thể do dropdown nằm trong frame or iframe
+		 //Find frame or iframe and switch
+		  wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt(driver.findElement(By.xpath("//iframe[@class='demo-frame']"))));
+		//Now find the element
+		  WebElement numberDropdown = wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("number-button")));
+		  numberDropdown.click();
+
+		  //2. Tất cả các item trong dropdown có locator chung là gì
+		  List <WebElement> allItemsDropdown = driver.findElements(By.xpath("//ul[@id='number-menu']/li[@class='ui-menu-item']/div"));
+		  int itemNumber = allItemsDropdown.size();
+		  /*
+		   * 3. Get text của tất cả các item này ra
+		   * 4. So sánh với text mà mình cần truyền vào
+		   * 5. Nếu như bằng với cái mình cần lấy thì click vào item đó
+		   */
+		  for(int i=0; i<itemNumber; i++) {
+			  if(allItemsDropdown.get(i).getText().equals(itemExpected)) {
+				  allItemsDropdown.get(i).click();
+				  break;
+			  }
+		  }
+		  String str = driver.findElement(By.xpath("//span[@id='number-button']/span[@class='ui-selectmenu-text']")).getText();
+		  System.out.println(str);
+		  //6. Verify item đã được chọn thành công
+		  Assert.assertTrue(driver.findElement(By.xpath("//span[@id='number-button']/span[@class='ui-selectmenu-text' and text()='19']")).isDisplayed());
+			//Once all your stuff done with this frame need to switch back to default
+//		  driver.switchTo().defaultContent();
+	  }
+	
+	
 	@Test(enabled=false)
 	public void TC_01_HTMLDropdown() throws InterruptedException {
 		driver.get("https://demo.guru99.com/test/newtours/register.php");
@@ -53,6 +90,28 @@ public class Topic_6_CustomDropdown {
 		selection.selectByVisibleText(country);
 		Assert.assertEquals(selection.getFirstSelectedOption().getText(), country);
 
+	}
+	@Test(enabled=false)
+	public void TC_01_HTMLDropdown_New() {
+		driver.get("https://demo.nopcommerce.com/");
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.manage().window().maximize();
+		
+		Select selection_before = new Select(driver.findElement(By.xpath("//select[@id='customerCurrency']")));
+		selection_before.selectByValue("https://demo.nopcommerce.com/changecurrency/6?returnUrl=%2F");
+		
+		//ERROR: element is not attached to the page document
+		// phải tìm lại bởi vì DOM bị load lại rồi nên nó ko tìm thấy element trước đó
+		// Single Page Application (SPA): mọi action chỉ trong 1 page thôi (tăng performance) => phải find lại element
+		// Single page application (SPA) là một ứng dụng web hay thậm chí là một trang web giúp đem lại cho người dùng những trải nghiệm mượt mà như trên một ứng dụng mobile. 
+		// Tại đó, người dùng sẽ thực hiện tất cả mọi thao tác trên một trang duy nhất, mọi cấu trúc trang sẽ chỉ tải một lần và không tải lại khi chuyển trang.
+		Select selection_after = new Select(driver.findElement(By.xpath("//select[@id='customerCurrency']")));
+		String actual = selection_after.getFirstSelectedOption().getText();
+		List<WebElement> actuals = selection_after.getOptions();
+		
+		System.out.println("Get selected Text =" + actual);
+		System.out.println("Number of items = " + actuals.size());
+		
 	}
 
 	//( ._.')----------------------------------------------------
@@ -95,9 +154,9 @@ public class Topic_6_CustomDropdown {
 	}
 	
 	//( ._.')----------------------------------------------------
-	@Test(enabled=true)
+	@Test(enabled=false)
 	public void TC_04_Custom_Dropdown_Angular_scroll() throws InterruptedException {
-		//Angular phải scroll những item ẩn thì mới select dc =>sshould be
+		//Angular pháº£i scroll nhá»¯ng item áº©n thÃ¬ má»›i select dc =>sshould be
 		driver.get("https://material.angular.io/components/select/overview");
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		driver.manage().window().maximize();
@@ -129,7 +188,7 @@ public class Topic_6_CustomDropdown {
 	}
 
 	//( ._.')----------------------------------------------------
-	@Test(enabled=true)
+	@Test(enabled=false)
 	public void TC_05_Custom_Dropdown_TelerikForJQuery() throws InterruptedException {
 		driver.get("https://demos.telerik.com/kendo-ui/dropdownlist/index");
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
@@ -178,7 +237,7 @@ public class Topic_6_CustomDropdown {
 	
 
 	//( ._.')----------------------------------------------------
-	@Test(enabled=true)
+	@Test(enabled=false)
 	public void TC_06_Custom_Dropdown_Multiple () throws InterruptedException {
 		driver.get("https://semantic-ui.com/modules/dropdown.html");
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
@@ -219,7 +278,7 @@ public class Topic_6_CustomDropdown {
 	}
 
 	//( ._.')----------------------------------------------------
-	@Test(enabled=true)
+	@Test(enabled=false)
 	public void TC_03_Custom_Dropdown_Vue () {
 		driver.get("https://www.telerik.com/kendo-vue-ui/components/dropdowns/dropdownlist/");
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
